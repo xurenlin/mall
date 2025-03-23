@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xrl.mall.payments.mapper.PaymentsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xrl.mall.payments.entity.Payments">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="payment_method" property="paymentMethod" />
+        <result column="payment_status" property="paymentStatus" />
+        <result column="amount" property="amount" />
+        <result column="transaction_id" property="transactionId" />
+        <result column="created_at" property="createdAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, payment_method, payment_status, amount, transaction_id, created_at
+    </sql>
+
+</mapper>
