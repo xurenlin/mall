@@ -96,7 +96,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.4</version>
+            <version>3.5.7</version>
         </dependency>
 
         <!-- 模板引擎（默认 Velocity） -->
@@ -113,6 +113,7 @@
             <version>2.2.0</version> <!-- Spring Boot 3.x 使用此版本 -->
             <!-- 若为 Spring Boot 2.x，使用版本 1.7.0 -->
         </dependency>
+
 
     </dependencies>
 

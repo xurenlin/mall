@@ -6,48 +6,33 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("users")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class Users implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("username")
+    @Schema(description = "")
     private String username;
-
-    @TableField("password")
+    @Schema(description = "")
     private String password;
-
-    @TableField("email")
+    @Schema(description = "")
     private String email;
-
-    @TableField("phone")
+    @Schema(description = "")
     private String phone;
-
-    @TableField("role")
+    @Schema(description = "")
     private String role;
-
-    @TableField("status")
+    @Schema(description = "")
     private String status;
-
-    @TableField("created_at")
+    @Schema(description = "")
     private LocalDateTime createdAt;
-
-    @TableField("updated_at")
+    @Schema(description = "")
     private LocalDateTime updatedAt;
 }

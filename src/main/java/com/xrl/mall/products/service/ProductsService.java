@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xrl
  * @since 2025-03-23
  */
-public interface IProductsService extends IService<Products> {
+public interface ProductsService extends IService<Products> {
 
 }

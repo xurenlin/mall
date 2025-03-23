@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xrl
  * @since 2025-03-23
  */
-public interface IOrderItemsService extends IService<OrderItems> {
+public interface OrderItemsService extends IService<OrderItems> {
 
 }

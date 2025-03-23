@@ -30,7 +30,8 @@ public class SecurityConfig {
                                 "/webjars/**"          // WebJars 静态资源
                         ).permitAll()
                         // 其他请求需认证
-                        .anyRequest().authenticated()
+                        //.anyRequest().authenticated()
+                        .anyRequest().permitAll()
                 )
                 .csrf(AbstractHttpConfigurer::disable); // 禁用 CSRF（适用于无状态 API）
         return http.build();

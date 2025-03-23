@@ -6,36 +6,25 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("user_tokens")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class UserTokens implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("user_id")
+    @Schema(description = "")
     private Long userId;
-
-    @TableField("token")
+    @Schema(description = "")
     private String token;
-
-    @TableField("expire_at")
+    @Schema(description = "")
     private LocalDateTime expireAt;
-
-    @TableField("created_at")
+    @Schema(description = "")
     private LocalDateTime createdAt;
 }

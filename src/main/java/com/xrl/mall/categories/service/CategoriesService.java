@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author xrl
  * @since 2025-03-23
  */
-public interface ICategoriesService extends IService<Categories> {
+public interface CategoriesService extends IService<Categories> {
 
 }

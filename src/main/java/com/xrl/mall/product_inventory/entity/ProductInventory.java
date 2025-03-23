@@ -6,33 +6,23 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("product_inventory")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class ProductInventory implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("product_id")
+    @Schema(description = "")
     private Long productId;
-
-    @TableField("available_stock")
+    @Schema(description = "")
     private Integer availableStock;
-
-    @TableField("updated_at")
+    @Schema(description = "")
     private LocalDateTime updatedAt;
 }

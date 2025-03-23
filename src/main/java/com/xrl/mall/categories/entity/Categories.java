@@ -6,30 +6,21 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("categories")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class Categories implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("name")
+    @Schema(description = "")
     private String name;
-
-    @TableField("created_at")
+    @Schema(description = "")
     private LocalDateTime createdAt;
 }

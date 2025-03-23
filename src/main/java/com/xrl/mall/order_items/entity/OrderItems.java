@@ -6,39 +6,27 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("order_items")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class OrderItems implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("order_id")
+    @Schema(description = "")
     private Long orderId;
-
-    @TableField("product_id")
+    @Schema(description = "")
     private Long productId;
-
-    @TableField("quantity")
+    @Schema(description = "")
     private Integer quantity;
-
-    @TableField("price")
+    @Schema(description = "")
     private BigDecimal price;
-
-    @TableField("total_amount")
+    @Schema(description = "")
     private BigDecimal totalAmount;
 }

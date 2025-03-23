@@ -7,48 +7,33 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author xrl
- * @since 2025-03-23
- */
-@Getter
-@Setter
-@TableName("products")
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Schema(description = "")
 public class Products implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @Schema(description = "")
     private Long id;
-
-    @TableField("name")
+    @Schema(description = "")
     private String name;
-
-    @TableField("description")
+    @Schema(description = "")
     private String description;
-
-    @TableField("price")
+    @Schema(description = "")
     private BigDecimal price;
-
-    @TableField("stock")
+    @Schema(description = "")
     private Integer stock;
-
-    @TableField("category_id")
+    @Schema(description = "")
     private Long categoryId;
-
-    @TableField("status")
+    @Schema(description = "")
     private String status;
-
-    @TableField("created_at")
+    @Schema(description = "")
     private LocalDateTime createdAt;
-
-    @TableField("updated_at")
+    @Schema(description = "")
     private LocalDateTime updatedAt;
 }
